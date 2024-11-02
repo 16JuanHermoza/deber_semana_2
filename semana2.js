@@ -13,6 +13,9 @@ function calcularEdad() {
         edadAnios--;
         edadMeses += 12; 
     }
+    const totalHoras = Math.floor((fechaActual - fechaNacimiento) / (1000 * 60 * 60));
+    document.getElementById('resultadoEdad').innerText = 
+        `Han pasado ${edadAnios} años, ${edadMeses} meses y ${edadDias} días, que es ${totalHoras} horas desde la fecha de nacimiento.`;
 }
 function verificarCedula() {
     const cedula = document.getElementsByName('cedula')[0].value;
